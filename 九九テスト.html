@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--入力としてやるべきタスクとその時間を受け取り、そこからスケジュールを決めて出力するプログラム-->
+<html>
+    <head>
+        <title>九九テスト作成</title>
+        <script src="meketest.js"></script>
+        <style>
+            img.cat {
+		        width: 100px;
+		        position:absolute;	
+		        top:100pt;
+		        left:230pt;
+            }
+        </style>
+    </head>
+    <body>
+        <!--印刷時の設定を行う。-->
+        <secion class="page">    
+        </secion>
+        <!--ここから本文-->
+        <div id="title"><h1>九九テスト作成</h1><hr></div>
+        <div id="textMsg">
+        <h3>&nbsp;以下のフォームより出題する段、出題数を選んでください。</h3>
+        <form method="get"　name="range1">
+        出題する段
+       <input type = "button" onclick = "allcheck()" value=" 全範囲を選択する"><br>
+        <p>１の段：<input type="checkbox" name="testrange" value="1">
+        ２の段：<input type="checkbox" name="testrange" value="2">
+        ３の段：<input type="checkbox" name="testrange" value="3"></p>
+        <p>４の段：<input type="checkbox" name="testrange" value="4">
+        ５の段：<input type="checkbox" name="testrange" value="5">
+        ６の段：<input type="checkbox" name="testrange" value="6"></p>
+        <p>７の段：<input type="checkbox" name="testrange" value="7">
+        ８の段：<input type="checkbox" name="testrange" value="8">
+        ９の段：<input type="checkbox" name="testrange" value="9"></p>
+
+        出題数：<input type="text" id="testnum"><br>
+        <!--送信ボタン、リセットボタン-->
+        <input type = "submit" onclick="kukuTest()">
+        </form>
+        </div>
+        
+
+    </body>
+</html>
